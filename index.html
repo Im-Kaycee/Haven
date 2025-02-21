@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hope Haven</title>
+    <link rel="icon" type="image/x-icon" href="http://www.w3.org/2000/svg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: rgb(235, 240, 236);
+            margin: 0;
+            padding: 0;
+        }
+        #container{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-items: center;
+            padding-top: 5vh;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="bg-green-900 text-white p-4 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <!-- Logo -->
+            <div class="flex items-center space-x-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="text-white" viewBox="0 0 16 16">
+                    <path d="M8 0a8 8 0 1 0 8 8A8 8 0 0 0 8 0zm3.5 12.5a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5V7h8v5.5zM8 4.5A1.5 1.5 0 1 1 6.5 6 1.5 1.5 0 0 1 8 4.5z"/>
+                </svg>
+                <span class="text-xl font-bold">Hope Haven</span>
+            </div>
+
+            <!-- Navigation Links -->
+            <ul class="hidden md:flex space-x-6 text-lg">
+                <li><a href="#" class="hover:text-green-600">Home</a></li>
+                <li><a href="#" class="hover:text-green-600">About</a></li>
+                <li><a href="#" class="hover:text-green-600">Contact</a></li>
+                <li>
+                    <button class="bg-white text-green-900 px-4 py-2 rounded-lg hover:bg-green-600 hover:text-white">
+                        Donate
+                    </button>
+                </li>
+            </ul>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="md:hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-8 h-8" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2 4h12v1H2zm0 4h12v1H2zm0 4h12v1H2z"/>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobile-menu" class="hidden md:hidden flex flex-col bg-green-900 text-center mt-2 p-4">
+            <a href="#" class="py-2 hover:bg-green-600">Home</a>
+            <a href="#" class="py-2 hover:bg-green-600">About</a>
+            <a href="#" class="py-2 hover:bg-green-600">Contact</a>
+            <button class="bg-white text-green-900 px-4 py-2 rounded-lg mt-2 hover:bg-green-600 hover:text-white">
+                Donate
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative bg-cover bg-center h-[500px] flex items-center justify-center text-white" 
+style="background-image: url('https://media.istockphoto.com/id/537311780/photo/unity-of-indian-children-asia.jpg?b=1&s=612x612&w=0&k=20&c=a_G_fs077szgwZCc8LWScf6rw0ozuJVJgfDP1M5b2MQ=');">
+    
+    <!-- Dark Overlay -->
+    <div class="absolute inset-0 bg-black opacity-50"></div>
+
+    <!-- Hero Content -->
+    <div class="relative text-center z-10 max-w-lg px-4">
+        <h1 class="text-4xl font-semibold sm:text-6xl text-white leading-tight">
+            Every Child Deserves Love, Care, and a Brighter Future
+        </h1>
+        <p class="mt-6 text-lg sm:text-xl text-gray-300">
+            At Hope Haven, we provide a safe and nurturing home for orphaned children, giving them the love, education, and opportunities they deserve.
+        </p>
+        <div class="mt-8 flex items-center justify-center gap-x-6">
+            <a href="#" class="inline-block mt-6 bg-green-900 text-white px-6 py-3 rounded-lg text-lg font-medium shadow-md hover:bg-green-500 transition">
+                Donate
+            </a>
+            <a href="#" class="inline-block mt-6 bg-white-900 text-white px-6 py-3 rounded-lg text-lg font-medium shadow-md hover:bg-green-500 transition">
+                Learn More <span aria-hidden="true">→</span>
+            </a>
+        </div>
+    </div>
+</header>
+<section id="mission" class="py-16">
+    <h1 class="text-center text-2xl font-semibold sm:text-4xl text-gray-900 mb-10">Our Mission</h1>
+    
+    <div class="container mx-auto px-6 lg:px-20 flex flex-col lg:flex-row items-center gap-8">
+        <!-- Left: Image -->
+        <div class="w-full lg:w-1/2">
+            <img src="https://img.freepik.com/free-photo/medium-shot-smiley-kids-posing-together_23-2148860406.jpg?uid=R174880311&ga=GA1.1.1927696136.1732018618&semt=ais_hybrid" 
+                 alt="Child Image" 
+                 class="w-full max-w-sm h-auto rounded-lg shadow-md object-cover">
+        </div>
+
+        <!-- Right: Mission Statement -->
+        <div class="w-full lg:w-1/2 text-center lg:text-left">
+            <h2 class="text-xl sm:text-2xl font-bold text-gray-800">Bringing Hope & A Brighter Future</h2>
+            <p class="mt-4 text-gray-600 text-lg leading-relaxed">
+                At Hope Haven, we are committed to providing a safe, loving, and nurturing environment 
+                for orphaned and vulnerable children. We strive to empower them through education, 
+                emotional support, and opportunities that pave the way for a brighter future.
+            </p>
+            <a href="#" class="inline-block mt-6 bg-green-900 text-white px-6 py-3 rounded-lg text-lg font-medium shadow-md hover:bg-green-500 transition">
+                Learn More
+            </a>
+        </div>
+    </div>
+</section>
+
+    <!-- Statistics Section -->
+    <section class="py-24 sm:py-32 bg-green-900">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+            <dl class="grid grid-cols-1 gap-x-8 gap-y-16 text-center lg:grid-cols-3">
+                <div class="mx-auto flex max-w-xs flex-col gap-y-4">
+                    <dt class="text-lg font-medium text-white">Children Supported Annually</dt>
+                    <dd class="order-first text-3xl font-semibold tracking-tight text-white sm:text-5xl">1,200+</dd>
+                </div>
+                <div class="mx-auto flex max-w-xs flex-col gap-y-4">
+                    <dt class="text-lg font-medium text-white">Meals Provided Every Year</dt>
+                    <dd class="order-first text-3xl font-semibold tracking-tight text-white sm:text-5xl">500,000+</dd>
+                </div>
+                <div class="mx-auto flex max-w-xs flex-col gap-y-4">
+                    <dt class="text-lg font-medium text-white">Education Programs Funded</dt>
+                    <dd class="order-first text-3xl font-semibold tracking-tight text-white sm:text-5xl">300+</dd>
+                </div>
+            </dl>
+        </div>
+    </section>
+    <section style="margin-top: 5vh;">
+        <h1 class="text-center text-2xl font-semibold sm:text-4xl text-gray-900 mb-10">Support a Cause</h1>
+        <div class="container mx-auto px-6 lg:px-20 flex flex-col lg:flex-row items-center gap-8" id="container">
+           
+<div
+  class="relative flex w-80 flex-col rounded-xl bg-gradient-to-br from-white to-gray-50 bg-clip-border text-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+ id="card">
+  <div
+    class="relative mx-4 -mt-6 h-40 overflow-hidden rounded-xl bg-clip-border shadow-lg group"
+  >
+    <div
+      class="absolute inset-0 bg-gradient-to-r from-blue-600 via-blue-500 to-indigo-600 opacity-90"
+    ></div>
+    <div
+      class="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.1)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] animate-pulse"
+    ></div>
+    <div class="absolute inset-0 flex items-center justify-center">
+        <img src="https://img.freepik.com/free-photo/african-kid-enjoying-life_23-2151447203.jpg?uid=R174880311&ga=GA1.1.1927696136.1732018618&semt=ais_hybrid" 
+        alt="Child Image" 
+        class="w-full max-w-sm h-auto rounded-lg shadow-md object-cover">
+    </div>
+  </div>
+  <div class="p-6">
+    <h5
+      class="mb-2 block font-sans text-xl font-semibold leading-snug tracking-normal text-gray-900 antialiased group-hover:text-blue-600 transition-colors duration-300"
+    >
+    Amara
+    </h5>
+    <p
+      class="block font-sans text-base font-light leading-relaxed text-gray-700 antialiased"
+    >
+    Amara struggles with access to quality education. Without proper schooling, her future remains uncertain.
+    </p>
+  </div>
+  <div class="p-6 pt-0">
+    <button
+      class="group relative w-full inline-flex items-center justify-center px-6 py-3 font-bold text-white rounded-lg bg-gradient-to-r from-green-900 to-green-700 hover:from-green-700 hover:to-green-600 shadow-lg shadow-green-500/30 hover:shadow-green-500/40 transition-all duration-300 hover:-translate-y-0.5"
+    >
+      <span class="relative flex items-center gap-2">
+        Read More
+        <svg
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          fill="none"
+          class="w-5 h-5 transform transition-transform group-hover:translate-x-1"
+        >
+          <path
+            d="M17 8l4 4m0 0l-4 4m4-4H3"
+            stroke-width="2"
+            stroke-linejoin="round"
+            stroke-linecap="round"
+          ></path>
+        </svg>
+      </span>
+    </button>
+  </div>
+</div>
+<div
+  class="relative flex w-80 flex-col rounded-xl bg-gradient-to-br from-white to-gray-50 bg-clip-border text-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+ id="card">
+  <div
+    class="relative mx-4 -mt-6 h-40 overflow-hidden rounded-xl bg-clip-border shadow-lg group"
+  >
+    <div
+      class="absolute inset-0 bg-gradient-to-r from-blue-600 via-blue-500 to-indigo-600 opacity-90"
+    ></div>
+    <div
+      class="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.1)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] animate-pulse"
+    ></div>
+    <div class="absolute inset-0 flex items-center justify-center">
+        <img src="https://img.freepik.com/free-photo/portrait-sad-child_23-2150761630.jpg?uid=R174880311&ga=GA1.1.1927696136.1732018618&semt=ais_hybrid" 
+        alt="Child Image" 
+        class="w-full max-w-sm h-auto rounded-lg shadow-md object-cover">
+    </div>
+  </div>
+  <div class="p-6">
+    <h5
+      class="mb-2 block font-sans text-xl font-semibold leading-snug tracking-normal text-gray-900 antialiased group-hover:text-blue-600 transition-colors duration-300"
+    >
+    Tunde
+    </h5>
+    <p
+      class="block font-sans text-base font-light leading-relaxed text-gray-700 antialiased"
+    >
+    Tunde lacks basic healthcare. Without medical attention, even minor illnesses can become life-threatening.
+    </p>
+  </div>
+  <div class="p-6 pt-0">
+    <button
+      class="group relative w-full inline-flex items-center justify-center px-6 py-3 font-bold text-white rounded-lg bg-gradient-to-r from-green-900 to-green-700 hover:from-green-700 hover:to-green-600 shadow-lg shadow-green-500/30 hover:shadow-green-500/40 transition-all duration-300 hover:-translate-y-0.5"
+    >
+      <span class="relative flex items-center gap-2">
+        Read More
+        <svg
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          fill="none"
+          class="w-5 h-5 transform transition-transform group-hover:translate-x-1"
+        >
+          <path
+            d="M17 8l4 4m0 0l-4 4m4-4H3"
+            stroke-width="2"
+            stroke-linejoin="round"
+            stroke-linecap="round"
+          ></path>
+        </svg>
+      </span>
+    </button>
+  </div>
+</div>
+<div
+  class="relative flex w-80 flex-col rounded-xl bg-gradient-to-br from-white to-gray-50 bg-clip-border text-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+ id="card">
+  <div
+    class="relative mx-4 -mt-6 h-40 overflow-hidden rounded-xl bg-clip-border shadow-lg group"
+  >
+    <div
+      class="absolute inset-0 bg-gradient-to-r from-blue-600 via-blue-500 to-indigo-600 opacity-90"
+    ></div>
+    <div
+      class="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.1)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] animate-pulse"
+    ></div>
+    <div class="absolute inset-0 flex items-center justify-center">
+        <img src="https://img.freepik.com/free-photo/kid-holding-wooden-miniature-toy-house_23-2151191484.jpg?uid=R174880311&ga=GA1.1.1927696136.1732018618&semt=ais_hybrid" 
+        alt="Child Image" 
+        class="w-full max-w-sm h-auto rounded-lg shadow-md object-cover">
+    </div>
+  </div>
+  <div class="p-6">
+    <h5
+      class="mb-2 block font-sans text-xl font-semibold leading-snug tracking-normal text-gray-900 antialiased group-hover:text-blue-600 transition-colors duration-300"
+    >
+    Zara
+    </h5>
+    <p
+      class="block font-sans text-base font-light leading-relaxed text-gray-700 antialiased"
+    >
+    Zara faces deep emotional trauma. Losing her parents has left her without the support she desperately needs.
+    </p>
+  </div>
+  <div class="p-6 pt-0">
+    <button
+      class="group relative w-full inline-flex items-center justify-center px-6 py-3 font-bold text-white rounded-lg bg-gradient-to-r from-green-900 to-green-700 hover:from-green-700 hover:to-green-600 shadow-lg shadow-green-500/30 hover:shadow-green-500/40 transition-all duration-300 hover:-translate-y-0.5"
+    >
+      <span class="relative flex items-center gap-2">
+        Read More
+        <svg
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          fill="none"
+          class="w-5 h-5 transform transition-transform group-hover:translate-x-1"
+        >
+          <path
+            d="M17 8l4 4m0 0l-4 4m4-4H3"
+            stroke-width="2"
+            stroke-linejoin="round"
+            stroke-linecap="round"
+          ></path>
+        </svg>
+      </span>
+    </button>
+  </div>
+</div>
+
+
+            </div>
+           
+    </section>
+    <section class="donations py-16">
+        <div class="mx-auto max-w-6xl px-6">
+            <h2 class="text-center text-3xl font-semibold text-gray-900">Support Our Orphanage</h2>
+            <p class="mx-auto mt-2 max-w-xl text-center text-gray-600">
+                Your generosity helps provide children with the essentials they need to thrive.
+            </p>
+    
+            <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+                <div class="relative bg-white rounded-xl p-6 shadow-sm">
+                    <img class="w-full h-40 object-cover rounded-lg" src="https://img.freepik.com/free-photo/african-kid-marketplace_23-2151489205.jpg?uid=R174880311&ga=GA1.1.1927696136.1732018618&semt=ais_hybrid" alt="Food & Nutrition">
+                    <h3 class="mt-4 text-lg font-medium text-gray-900 text-center">Food & Nutrition</h3>
+                    <p class="mt-2 text-sm text-gray-600 text-center">
+                        Ensuring every child has access to nutritious meals daily.
+                    </p>
+                </div>
+                
+                <div class="relative bg-white rounded-xl p-6 shadow-sm">
+                    <img class="w-full h-40 object-cover rounded-lg" src="https://img.freepik.com/free-photo/african-kid-leaning-class_23-2148892562.jpg?uid=R174880311&ga=GA1.1.1927696136.1732018618&semt=ais_hybrid" alt="Education">
+                    <h3 class="mt-4 text-lg font-medium text-gray-900 text-center">Education</h3>
+                    <p class="mt-2 text-sm text-gray-600 text-center">
+                        Providing quality education and learning materials.
+                    </p>
+                </div>
+                
+                <div class="relative bg-white rounded-xl p-6 shadow-sm">
+                    <img class="w-full h-40 object-cover rounded-lg" src="https://img.freepik.com/free-photo/african-american-boy-getting-checkup-by-doctor_181624-35925.jpg?uid=R174880311&ga=GA1.1.1927696136.1732018618&semt=ais_hybrid" alt="Healthcare">
+                    <h3 class="mt-4 text-lg font-medium text-gray-900 text-center">Healthcare</h3>
+                    <p class="mt-2 text-sm text-gray-600 text-center">
+                        Access to medical care and health checkups.
+                    </p>
+                </div>
+                
+                <div class="relative bg-white rounded-xl p-6 shadow-sm">
+                    <img class="w-full h-40 object-cover rounded-lg" src="https://img.freepik.com/free-photo/african-children-enjoying-life_23-2151447355.jpg?uid=R174880311&ga=GA1.1.1927696136.1732018618&semt=ais_hybrid" alt="Shelter & Safety">
+                    <h3 class="mt-4 text-lg font-medium text-gray-900 text-center">Shelter & Safety</h3>
+                    <p class="mt-2 text-sm text-gray-600 text-center">
+                        A safe and loving home for every child.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-sm mx-auto bg-white p-6 rounded-2xl shadow-md" style="margin-top: 10vh;">
+            <h2 class="text-2xl font-semibold text-gray-900 text-center">Donate</h2>
+        
+            <div class="mt-4">
+                <label class="block text-sm font-medium text-gray-700">Currency</label>
+                <div class="relative mt-1">
+                    <select class="block w-full rounded-md border-gray-300 py-2 px-3 shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
+                        <option value="USD">USD - US Dollar</option>
+                        <option value="EUR">EUR - Euro</option>
+                        <option value="GBP">GBP - British Pound</option>
+                        <option value="NGN">NGN - Nigerian Naira</option>
+                    </select>
+                </div>
+            </div>
+        
+            <div class="mt-4">
+                <label class="block text-sm font-medium text-gray-700">Amount</label>
+                <input type="number" min="1" class="mt-1 block w-full rounded-md border-gray-300 py-2 px-3 shadow-sm focus:border-indigo-500 focus:ring-indigo-500" placeholder="Enter amount">
+            </div>
+        
+            <button class="mt-6 w-full bg-green-900 hover:bg-green-700 text-white font-medium py-2 px-4 rounded-md shadow">
+                Donate
+            </button>
+        </div>
+        
+    </section>
+    <!-- Newsletter Section -->
+<section class="bg-gray-100 py-12 px-6">
+    <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-3xl font-semibold text-gray-900">Subscribe to Our Newsletter</h2>
+        <p class="mt-2 text-gray-600">Stay updated with our latest news and events.</p>
+        <div class="mt-6 flex flex-col sm:flex-row gap-3">
+            <input type="email" placeholder="Enter your email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500">
+            <button class="bg-green-900 text-white px-6 py-2 rounded-md hover:bg-green-700">Subscribe</button>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-green-900 text-gray-300 py-10">
+    <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-3 gap-8">
+        <!-- About -->
+        <div>
+            <h3 class="text-xl font-semibold text-white">About Us</h3>
+            <p class="mt-2 text-gray-400">We are dedicated to providing a safe and loving home for orphans, ensuring they receive proper care, education, and support.</p>
+        </div>
+        
+        <!-- Quick Links -->
+        <div>
+            <h3 class="text-xl font-semibold text-white">Quick Links</h3>
+            <ul class="mt-2 space-y-2">
+                <li><a href="#" class="hover:underline">Home</a></li>
+                <li><a href="#" class="hover:underline">About</a></li>
+                <li><a href="#" class="hover:underline">Donate</a></li>
+                <li><a href="#" class="hover:underline">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- Contact -->
+        <div>
+            <h3 class="text-xl font-semibold text-white">Contact Us</h3>
+            <p class="mt-2 text-gray-400">123 Orphanage Street, City, Country</p>
+            <p class="text-gray-400">Email: info@orphanage.org</p>
+            <p class="text-gray-400">Phone: +123 456 7890</p>
+        </div>
+    </div>
+
+    <div class="text-center text-gray-500 mt-10 border-t border-gray-700 pt-4">
+        &copy; 2025 Orphanage Name. All rights reserved.
+    </div>
+</footer>
+
+
+    <script>
+        document.getElementById("menu-btn").addEventListener("click", function() {
+            document.getElementById("mobile-menu").classList.toggle("hidden");
+        });
+    </script>
+
+</body>
+</html>
